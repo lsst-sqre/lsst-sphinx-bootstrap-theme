@@ -27,4 +27,15 @@ setup(
         'Programming Language :: Python :: 3',
     ],
     zip_safe=False,
+    packages=['lsst_sphinx_bootstrap_theme'],
+    package_data={'lsst_sphinx_bootstrap_theme': [
+        'theme.conf',
+        '*.html',
+        'static/*.css',
+        'static/*.js',
+        'static/*.ico',
+        'static/*.svg',
+        'static/*.png',
+    ]},
+    include_package_data=True,
 )
