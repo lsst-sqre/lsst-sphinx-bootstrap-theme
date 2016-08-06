@@ -14,10 +14,11 @@
 body {
   background-color: #ffffff;
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  font-weight: normal;
-  line-height: 18px;
+  font-family: "ff-meta-web-pro", "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.5;
   color: #404040;
 }
 
@@ -67,9 +68,9 @@ h6 {
 }
 
 p {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: normal;
-  line-height: 18px;
+  line-height: 1.5;
   margin-top: 0px;
   margin-bottom: 9px;
 }
@@ -127,15 +128,15 @@ address {
   line-height: 18px;
   margin-bottom: 18px;
 }
+code, pre, tt {
+  font-family: "hack", "Menlo", monospace;
+  font-size: 0.9em;
+}
 code, pre {
   padding: 0 3px 2px;
-  font-family: monospace;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-}
-tt {
-  font-family: monospace;
 }
 code {
   padding: 1px 3px;
@@ -199,10 +200,6 @@ th {
     background-color: #dddddd;
 }
 
-.viewcode-back {
-    font-family: sans-serif;
-}
-
 div.viewcode-block:target {
     background-color: #f4debf;
     border-top: 1px solid #ac9;
@@ -229,7 +226,6 @@ div.topbar {
 }
 
 div.topbar a.brand {
-  font-family: 'Source Sans Pro', sans-serif;
   font-size: 26px;
   color: #ffffff;
   font-weight: 600;
@@ -237,16 +233,17 @@ div.topbar a.brand {
   float: left;
   display: block;
   height: 32px;
-  padding: 12px 12px 0px 140px;
+  /* padding: 12px 12px 0px 140px; */
+  padding: 0px 12px 0px 140px;
   margin-left: -10px;
   background: transparent url("lsst_inverted_logo.png") no-repeat 10px 8px;
   background: url("lsst_inverted_logo.svg") no-repeat 10px 8px;
   background-size: 91px 24px;
 }
 
-span#logotext {
-    margin-top: 30px;
-}
+/* span#logotext { */
+/*     margin-top: 30px; */
+/* } */
 
 div.topbar .brand:hover, div.topbar ul li a.homelink:hover {
   background-color: #333;
@@ -313,7 +310,6 @@ div.topbar form {
 div.topbar input {
   background-color: #444;
   background-color: rgba(255, 255, 255, 0.3);
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: normal;
   font-weight: 13px;
   line-height: 1;
@@ -413,7 +409,6 @@ div.sphinxsidebarwrapper {
 }
 
 div.sphinxsidebar h3 {
-    font-family: 'Trebuchet MS', sans-serif;
     font-size: 1.4em;
     font-weight: normal;
     margin: 5px 0px 0px 5px;
@@ -421,7 +416,6 @@ div.sphinxsidebar h3 {
     line-height: 1.6em;
 }
 div.sphinxsidebar h4 {
-    font-family: 'Trebuchet MS', sans-serif;
     font-size: 1.3em;
     font-weight: normal;
     margin: 5px 0 0 0;

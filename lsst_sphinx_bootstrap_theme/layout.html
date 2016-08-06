@@ -5,7 +5,9 @@
 
 {# Add the google webfonts needed for the logo #}
 {% block extrahead %}
-<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600' rel='stylesheet' type='text/css'/>
+{# jonathansick's lsst-sphinx-bootstrap-theme typekit kit #}
+<script src="https://use.typekit.net/eme3dgn.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
 {% if not embedded %}<script type="text/javascript" src="{{ pathto('_static/copybutton.js', 1) }}"></script>{% endif %}
 
 {% endblock %}
