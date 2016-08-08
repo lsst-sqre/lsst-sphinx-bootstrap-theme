@@ -9,5 +9,6 @@ recursive-include lsst_sphinx_bootstrap_theme *.js
 recursive-include lsst_sphinx_bootstrap_theme *.svg
 recursive-include lsst_sphinx_bootstrap_theme *.png
 recursive-include lsst_sphinx_bootstrap_theme *.ico
+recursive-include lsst_sphinx_bootstrap_theme/templates/ *.rst
 
 exclude *.pyc *.o

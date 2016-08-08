@@ -36,6 +36,7 @@ setup(
         'static/*.ico',
         'static/*.svg',
         'static/*.png',
+        'templates/autosummary/*.rst'
     ]},
     include_package_data=True,
 )
