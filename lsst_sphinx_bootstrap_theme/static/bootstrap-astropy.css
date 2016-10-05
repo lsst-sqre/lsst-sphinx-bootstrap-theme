@@ -211,6 +211,14 @@ table.docutils {
     border-collapse: separate;
 }
 
+/* hyphenation in tables in webkit breaks cell sizing. */
+div.body dd {
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    -webkit-hyphens: none;
+    hyphens: none;
+}
+
 /* Topbar --------------------------------------------------------------------*/
 
 div.topbar {
