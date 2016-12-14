@@ -81,6 +81,17 @@
     {%- endif %} &nbsp;
     <a href="#">Back to Top</a></p>
   <p>
+    {%- if last_updated %}
+    {% trans last_updated=last_updated|e %}Last built {{ last_updated }}.{% endtrans %}
+    {%- endif %}
+  </p>
+  <p>
+    {%- if show_sphinx %}
+    {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %} Page design is based on Astropy's bootstrap-astropy theme in <a href="https://github.com/astropy/astropy-helpers">astropy-helpers</a>. <br />
+    {%- endif %}
+    LSST documentation is proudly served through the <a href="https://fastly.com">Fastly</a> CDN.
+  </p>
+  <p>
     {%- if show_copyright %}
     {%- if hasdoc('copyright') %}
     {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}<br/>
@@ -88,12 +99,9 @@
     {% trans copyright=copyright|e %}&copy; Copyright {{ copyright }}.{% endtrans %}<br/>
     {%- endif %}
     {%- endif %}
-    {%- if show_sphinx %}
-    {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %} &nbsp;
-    {%- endif %}
-    {%- if last_updated %}
-    {% trans last_updated=last_updated|e %}Last built {{ last_updated }}.{% endtrans %} <br/>
-    {%- endif %}
+  </p>
+  <p>
+    Financial support for <a href="https://www.lsst.org">LSST</a> comes from the National Science Foundation (<a href="https://www.nsf.gov">NSF</a>) through Cooperative Agreement No. 1258333, the Department of Energy (<a href="http://energy.gov">DOE</a>) Office of Science under Contract No. DE-AC02-76SF00515, and private funding raised by the <a href="https://www.lsstcorporation.org">LSST Corporation</a>. The NSF-funded <a href="https://project.lsst.org">LSST Project Office</a> for construction was established as an operating center under management of the Association of Universities for Research in Astronomy (<a href="http://www.aura-astronomy.org">AURA</a>). The DOE-funded effort to build the LSST camera is managed by the SLAC National Accelerator Laboratory (<a href="https://www.slac.stanford.edu">SLAC</a>).
   </p>
 </footer>
 {%- endblock %}
