@@ -10,7 +10,7 @@ VERSION = '0.1.0'
 setup(
     name=NAME,
     version=VERSION,
-    description='Sphinx theme for LSST Stack documentation built on'
+    description='Sphinx theme for LSST Stack documentation built on '
                 'Bootstrap and astropy-helpers',
     author='Jonathan Sick',
     author_email='jsick@lsst.org',
