@@ -4,7 +4,7 @@
 from setuptools import setup
 
 NAME = 'lsst-sphinx-bootstrap-theme'
-VERSION = '0.1.0'
+VERSION = '0.1.1'
 
 
 setup(
@@ -15,7 +15,7 @@ setup(
     author='Jonathan Sick',
     author_email='jsick@lsst.org',
     license='BSD',
-    url='https://github.com/lsst-sqre/lsst_sphinx_bootstrap_theme',
+    url='https://github.com/lsst-sqre/lsst-sphinx-bootstrap-theme',
     long_description=open('README.rst').read(),
     classifiers=[
         'Development Status :: 4 - Beta',

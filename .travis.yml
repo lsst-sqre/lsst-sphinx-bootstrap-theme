@@ -1,69 +1,17 @@
-# We set the language to c because python isn't supported on the MacOS X nodes
-# on Travis. However, the language ends up being irrelevant anyway, since we
-# install Python ourselves using conda.
-language: c
-
-os:
-    - osx
-    - linux
-
-# Setting sudo to false opts in to Travis-CI container-based builds.
 sudo: false
-
-# The apt packages below are needed for sphinx builds, which can no longer
-# be installed with sudo apt-get.
-addons:
-    apt:
-        packages:
-            - graphviz
-
-env:
-  matrix:
-    - PYTHON_VERSION=2.7
-    - PYTHON_VERSION=3.3
-    - PYTHON_VERSION=3.4
-    - PYTHON_VERSION=3.5
-  global:
-    - CONDA_DEPENDENCIES="setuptools pytest sphinx cython numpy"
-    - PIP_DEPENDENCIES="coveralls pytest-cov"
-
-matrix:
-    include:
-
-        - os: linux
-          env: PYTHON_VERSION=2.7 SETUPTOOLS_VERSION=20
-
-        - os: linux
-          env: PYTHON_VERSION=2.7 SETUPTOOLS_VERSION=dev DEBUG=True
-               CONDA_DEPENDENCIES='pytest sphinx cython numpy'
-
-    allow_failures:
-        - os: linux
-          env: PYTHON_VERSION=2.7 SETUPTOOLS_VERSION=dev DEBUG=True
-               CONDA_DEPENDENCIES='pytest sphinx cython numpy'
-
-before_install:
-    - if [[ $TRAVIS_OS_NAME == osx ]]; then brew update; brew install graphviz; fi
-
-install:
-
-    - git clone git://github.com/astropy/ci-helpers.git
-    - source ci-helpers/travis/setup_conda_$TRAVIS_OS_NAME.sh
-
-    # We cannot install the developer version of setuptools using pip because
-    # pip tries to remove the previous version of setuptools before the
-    # installation is complete, which causes issues. Instead, we just install
-    # setuptools manually.
-    - if [[ $SETUPTOOLS_VERSION == dev ]]; then git clone http://github.com/pypa/setuptools.git; cd setuptools; python setup.py install; cd ..; fi
-
-before_script:
-    # Some of the tests use git commands that require a user to be configured
-    - git config --global user.name "A U Thor"
-    - git config --global user.email "author@example.com"
-
+language: python
+python:
+  - '3.6'
 script:
-    # Use full path for coveragerc; see issue #193
-    - py.test --cov astropy_helpers --cov-config $(pwd)/astropy_helpers/tests/coveragerc astropy_helpers
-
-after_success:
-    - coveralls
+  - python setup.py build
+deploy:
+  provider: pypi
+  user: sqre-admin
+  skip_upload_docs: true
+  distributions: sdist
+  password:
+    # PyPI deployment credentials for sqre-admin
+    secure: "zHfawqxZk5OMniSni2FpvkKrn0KQt/RVSWayquJ3UL/aHXIV1YAZy6gS4PX6JaftRcg2NSE83D64gezh0MaWfjBx15ke8J2q5YDp9B1zlPQygVaHL9my1md26LNVPy1nu/2qxzh7P7J4CTFF6wKmUBCN1JhY/J/662fq8bWk5LTTNSxGqOnh6Cz3PHJksjG8T2KGOe8t2xVROyjKSZKl2FFzAZO3l4yDAj7oOD2dXgV5CYgZcrJE6ks1GpUx07cFhQHN0iDcPlaE3PihAomP8CliyoWFfMLTpT6UXJ9VAvDhNpe+Sva2gF65mgMWr3/gXnPei1GlInL8HGRpP+GaI31d8atH5RETNR7qeRqQohbDtTIV6+3xI2y9R0+ZhrJx22mVWyw0rtGVZgK1vW81Q3Js2d7U9LMzmVJCM6eHvN5eiOxl2aeidtWxP7XvnO64hltZNTrTXsMa5mTaFNtifbBLgvQXCn8ttqrxS6Zh/jrdCC5J+lyS5EkCpzSV/2p2O0JM+K4W3mE1KvbMRsq8bGZUy/4Dg2gLm9kPis58PkTj4O8OSjC8etmGH9s6FzSu8JHTNG1u9tzPouY3EDZefbUmPORnkuRr8iJMuxZkwJz6ID3Py6mNkr82nJMMzIOlAcoscuREZLCD+OI4QS7ZlxrwdthWmTaeV2Zb6ZrUtns="
+  on:
+    tags: true
+    repo: lsst-sqre/lsst-sphinx-bootstrap-theme
