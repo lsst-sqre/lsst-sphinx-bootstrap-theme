@@ -14,3 +14,4 @@ deploy:
     tags: true
     distributions: sdist
     repo: lsst-sqre/lsst-sphinx-bootstrap-theme
+    skip_upload_docs: true
