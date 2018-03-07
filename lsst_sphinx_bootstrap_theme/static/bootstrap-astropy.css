@@ -14,7 +14,7 @@
 body {
   background-color: #ffffff;
   margin: 0;
-  font-family: "ff-meta-web-pro", "Helvetica Neue", "Helvetica", sans-serif;
+  font-family: "source-sans-pro", "Helvetica Neue", "Helvetica", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 14px;
@@ -112,7 +112,7 @@ hr {
 }
 strong {
   font-style: inherit;
-  font-weight: bold;
+  font-weight: 700;
 }
 em {
   font-style: italic;
@@ -129,8 +129,9 @@ address {
   margin-bottom: 18px;
 }
 code, pre, tt {
-  font-family: "hack", "Menlo", monospace;
-  font-size: 0.9em;
+  font-family: "source-code-pro", "Menlo", monospace;
+  font-size: 1.0em;
+  font-weight: 400;
 }
 code, pre {
   padding: 0 3px 2px;
@@ -193,7 +194,7 @@ tt.xref, a tt, tt.descname, tt.descclassname {
   border: none;
   padding: 0 1px 0 1px;
   background-color: transparent;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 th {
@@ -236,7 +237,7 @@ div.topbar {
 div.topbar a.brand {
   font-size: 26px;
   color: #ffffff;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   float: left;
   display: block;
@@ -318,8 +319,9 @@ div.topbar form {
 div.topbar input {
   background-color: #444;
   background-color: rgba(255, 255, 255, 0.3);
-  font-size: normal;
-  font-weight: 13px;
+  font-style: normal;
+  font-size: 13px;
+  font-weight: 400;
   line-height: 1;
   padding: 4px 9px;
   color: #ffffff;
@@ -418,14 +420,14 @@ div.sphinxsidebarwrapper {
 
 div.sphinxsidebar h3 {
     font-size: 1.4em;
-    font-weight: normal;
+    font-weight: 400;
     margin: 5px 0px 0px 5px;
     padding: 0;
     line-height: 1.6em;
 }
 div.sphinxsidebar h4 {
     font-size: 1.3em;
-    font-weight: normal;
+    font-weight: 400;
     margin: 5px 0 0 0;
     padding: 0;
 }
@@ -517,7 +519,7 @@ div.warning p.admonition-title {
     margin: 0;
     padding: 0.1em 0 0.1em 0.5em;
     color: white;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 1.1em;
 }
 div.admonition ul, div.admonition ol,
