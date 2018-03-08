@@ -396,7 +396,7 @@ footer {
 /* Sphinx sidebar ------------------------------------------------------------*/
 
 div.sphinxsidebar {
-    font-size: inherit;
+    font-size: 0.9em;
     border-radius: 3px;
     background-color: #eee;
     border: 1px solid #bbb;
