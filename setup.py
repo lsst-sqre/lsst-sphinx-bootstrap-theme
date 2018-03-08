@@ -4,7 +4,7 @@
 from setuptools import setup
 
 NAME = 'lsst-sphinx-bootstrap-theme'
-VERSION = '0.1.1'
+VERSION = '0.1.2'
 
 
 setup(

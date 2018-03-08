@@ -14,11 +14,11 @@
 body {
   background-color: #ffffff;
   margin: 0;
-  font-family: "ff-meta-web-pro", "Helvetica Neue", "Helvetica", sans-serif;
+  font-family: "source-sans-pro", "Helvetica Neue", "Helvetica", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.4;
   color: #404040;
 }
 
@@ -41,7 +41,7 @@ a:hover {
 h1,h2,h3,h4,h5,h6 {
   color: #404040;
   margin: 0.7em 0 0 0;
-  line-height: 1.5em;
+  line-height: 1.3;
 }
 h1 {
   font-size: 24px;
@@ -49,9 +49,9 @@ h1 {
 }
 h2 {
   font-size: 21px;
-  line-height: 1.2em;
   margin: 1em 0 0.5em 0;
-  border-bottom: 1px solid #404040;
+  border-top: 1px solid #404040;
+  padding-top: 0.5em;
 }
 h3 {
   font-size: 18px;
@@ -68,11 +68,8 @@ h6 {
 }
 
 p {
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.5;
-  margin-top: 0px;
-  margin-bottom: 9px;
+  margin-top: 0;
+  margin-bottom: 1em;
 }
 
 ul, ol {
@@ -89,7 +86,6 @@ ol {
   list-style: decimal;
 }
 li {
-  line-height: 18px;
   color: #404040;
 }
 ul.unstyled {
@@ -98,9 +94,6 @@ ul.unstyled {
 }
 dl {
   margin-bottom: 18px;
-}
-dl dt, dl dd {
-  line-height: 18px;
 }
 dl dd {
   margin-left: 9px;
@@ -112,7 +105,7 @@ hr {
 }
 strong {
   font-style: inherit;
-  font-weight: bold;
+  font-weight: 700;
 }
 em {
   font-style: italic;
@@ -125,18 +118,13 @@ em {
 
 address {
   display: block;
-  line-height: 18px;
+  line-height: 1.2;
   margin-bottom: 18px;
 }
 code, pre, tt {
-  font-family: "hack", "Menlo", monospace;
-  font-size: 0.9em;
-}
-code, pre {
-  padding: 0 3px 2px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+  font-family: "source-code-pro", "Menlo", monospace;
+  font-size: 1.0em;
+  font-weight: 400;
 }
 code {
   padding: 1px 3px;
@@ -145,7 +133,7 @@ pre {
   display: block;
   padding: 8.5px;
   margin: 0 0 18px;
-  line-height: 18px;
+  line-height: 1.2;
   border: 1px solid #ddd;
   border: 1px solid rgba(0, 0, 0, 0.12);
   -webkit-border-radius: 3px;
@@ -157,15 +145,6 @@ pre {
 
 img {
   margin: 9px 0;
-}
-
-/* format inline code with a rounded box */
-tt, code {
-    margin: 0 2px;
-    padding: 0 5px;
-    border: 1px solid #ddd;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    border-radius: 3px;
 }
 
 code.xref, a code {
@@ -193,7 +172,7 @@ tt.xref, a tt, tt.descname, tt.descclassname {
   border: none;
   padding: 0 1px 0 1px;
   background-color: transparent;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 th {
@@ -236,7 +215,7 @@ div.topbar {
 div.topbar a.brand {
   font-size: 26px;
   color: #ffffff;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   float: left;
   display: block;
@@ -318,8 +297,9 @@ div.topbar form {
 div.topbar input {
   background-color: #444;
   background-color: rgba(255, 255, 255, 0.3);
-  font-size: normal;
-  font-weight: 13px;
+  font-style: normal;
+  font-size: 13px;
+  font-weight: 400;
   line-height: 1;
   padding: 4px 9px;
   color: #ffffff;
@@ -402,7 +382,7 @@ footer {
 /* Sphinx sidebar ------------------------------------------------------------*/
 
 div.sphinxsidebar {
-    font-size: inherit;
+    font-size: 0.9em;
     border-radius: 3px;
     background-color: #eee;
     border: 1px solid #bbb;
@@ -418,14 +398,14 @@ div.sphinxsidebarwrapper {
 
 div.sphinxsidebar h3 {
     font-size: 1.4em;
-    font-weight: normal;
+    font-weight: 400;
     margin: 5px 0px 0px 5px;
     padding: 0;
     line-height: 1.6em;
 }
 div.sphinxsidebar h4 {
     font-size: 1.3em;
-    font-weight: normal;
+    font-weight: 400;
     margin: 5px 0 0 0;
     padding: 0;
 }
@@ -474,7 +454,7 @@ div.body {
 
 div.bodywrapper {
     margin: 0 0 0 230px;
-    max-width: 55em;
+    max-width: 40em;
 }
 
 
@@ -517,7 +497,7 @@ div.warning p.admonition-title {
     margin: 0;
     padding: 0.1em 0 0.1em 0.5em;
     color: white;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 1.1em;
 }
 div.admonition ul, div.admonition ol,
