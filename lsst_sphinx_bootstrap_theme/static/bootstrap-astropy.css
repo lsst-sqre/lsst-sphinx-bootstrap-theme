@@ -223,8 +223,8 @@ div.topbar a.brand {
   /* padding: 12px 12px 0px 140px; */
   padding: 0px 12px 0px 140px;
   margin-left: -10px;
-  background: transparent url("lsst_inverted_logo.png") no-repeat 10px 8px;
-  background: url("lsst_inverted_logo.svg") no-repeat 10px 8px;
+  /* background: transparent url("lsst_inverted_logo.png") no-repeat 10px 8px; */
+  background: url("lsst-logo-dark-no-text.svg") no-repeat 10px 8px;
   background-size: 91px 24px;
 }
 
