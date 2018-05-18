@@ -1,5 +1,6 @@
 # Node / Gulp
 node_modules
+lsst_sphinx_bootstrap_theme/static/app.css
 
 # Compiled files
 *.py[cod]
