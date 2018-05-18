@@ -11,6 +11,9 @@
 /* Core styling from sphinx itself */
 @import 'basic';
 
+// Settings
+@import 'settings.colors';
+
 body {
   background-color: #ffffff;
   margin: 0;
@@ -19,7 +22,7 @@ body {
   font-style: normal;
   font-size: 16px;
   line-height: 1.4;
-  color: #404040;
+  color: $text-color;
 }
 
 /* Hyperlinks ----------------------------------------------------------------*/
@@ -44,22 +47,24 @@ h3,
 h4,
 h5,
 h6 {
-  color: #404040;
+  color: $text-color;
   margin: 0.7em 0 0 0;
   line-height: 1.3;
 }
 h1 {
-  font-size: 24px;
+  font-size: 32px;
   margin: 0;
+  margin-bottom: 1em;
 }
 h2 {
-  font-size: 21px;
+  font-size: 28px;
   margin: 1em 0 0.5em 0;
-  border-top: 1px solid #404040;
+  color: $h2-color;
+  border-top: 1px solid $primary-color;
   padding-top: 0.5em;
 }
 h3 {
-  font-size: 18px;
+  font-size: 22px;
 }
 h4 {
   font-size: 16px;
@@ -95,7 +100,7 @@ ol {
   list-style: decimal;
 }
 li {
-  color: #404040;
+  color: $text-color;
 }
 ul.unstyled {
   list-style: none;
@@ -110,7 +115,7 @@ dl dd {
 hr {
   margin: 20px 0 19px;
   border: 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid $text-color;
 }
 strong {
   font-style: inherit;
@@ -122,7 +127,7 @@ em {
   line-height: inherit;
 }
 .muted {
-  color: #bfbfbf;
+  color: $muted-text-color;
 }
 
 address {
@@ -235,13 +240,13 @@ div.topbar {
   right: 0;
   z-index: 10000;
   padding: 0px 20px;
-  background-color: #0099cc;
+  background-color: $primary-color;
   overflow: auto;
 }
 
 div.topbar a.brand {
   font-size: 26px;
-  color: #ffffff;
+  color: $white;
   font-weight: 700;
   text-decoration: none;
   float: left;
@@ -271,8 +276,7 @@ div.topbar ul {
   margin: 0;
   padding: 0 0 0 10px;
   float: right;
-  /* color: #bfbfbf; */
-  color: #ffffff;
+  color: $white;
   text-align: center;
   text-decoration: none;
   height: 100%;
@@ -286,8 +290,7 @@ div.topbar ul li {
 }
 
 div.topbar ul li a {
-  /* color: #bfbfbf; */
-  color: #ffffff;
+  color: $white;
   text-decoration: none;
   padding: 5px;
   display: block;
