@@ -23,7 +23,7 @@ const cleanCssConfig = {
 
   prod: {
     compatibility: '*',
-    level: 2,
+    level: 2
   }
 };
 
@@ -38,7 +38,8 @@ export const environment = () => console.log(`${env}`);
  * Compile the sass
  */
 const sassTask = () => {
-  let stream = gulp.src('scss/app.scss')
+  let stream = gulp
+    .src('scss/app.scss')
     // Initialize sourcemaps
     .pipe(sourcemaps.init())
     // Compile sass synchronously
@@ -55,7 +56,6 @@ const sassTask = () => {
 
   stream.pipe(gulp.dest('lsst_sphinx_bootstrap_theme/static'));
   return stream;
-
 };
 gulp.task('sass', sassTask);
 
@@ -64,7 +64,7 @@ gulp.task('sass', sassTask);
  * Watch for source changes and rebuild any assets
  */
 const watchTask = () => {
-  gulp.watch("styles.scss", ['sass']);
+  gulp.watch('styles.scss', ['sass']);
 };
 gulp.task('watch', watchTask);
 
