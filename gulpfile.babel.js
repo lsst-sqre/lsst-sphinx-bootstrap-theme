@@ -2,6 +2,7 @@ import autoprefixer from 'autoprefixer';
 import cleanCSS from 'gulp-clean-css';
 import gulp from 'gulp';
 import minimist from 'minimist';
+import GulpRunner from 'gulp-run';
 import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
 
@@ -67,6 +68,14 @@ const watchTask = () => {
   gulp.watch('styles.scss', ['sass']);
 };
 gulp.task('watch', watchTask);
+
+/*
+ * gulp pretty
+ * Run Prettier to autoformat code.
+ */
+export const pretty = () => {
+  return GulpRunner('npm run pretty').exec();
+};
 
 /*
  * gulp

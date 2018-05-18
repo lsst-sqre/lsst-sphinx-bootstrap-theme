@@ -2,8 +2,7 @@
   "name": "lsst-sphinx-bootstrap-theme",
   "private": true,
   "version": "0.0.1",
-  "description":
-    "Sphinx theme for LSST docs, based on Bootstrap and Astropy.\"",
+  "description": "Sphinx theme for LSST docs, based on Bootstrap and Astropy.",
   "main": "gulpfile.babel.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -20,7 +19,9 @@
     "url": "https://github.com/lsst-sqre/lsst-sphinx-bootstrap-theme/issues"
   },
   "homepage": "https://github.com/lsst-sqre/lsst-sphinx-bootstrap-theme#readme",
-  "dependencies": {},
+  "dependencies": {
+    "gulp-run": "^1.7.1"
+  },
   "devDependencies": {
     "autoprefixer": "^8.5.0",
     "babel": "^6.23.0",
