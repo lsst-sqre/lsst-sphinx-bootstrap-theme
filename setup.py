@@ -4,12 +4,10 @@
 from setuptools import setup
 
 NAME = 'lsst-sphinx-bootstrap-theme'
-VERSION = '0.1.2'
 
 
 setup(
     name=NAME,
-    version=VERSION,
     description='Sphinx theme for LSST Stack documentation built on '
                 'Bootstrap and astropy-helpers',
     author='Jonathan Sick',
@@ -39,4 +37,6 @@ setup(
         'templates/autosummary/*.rst'
     ]},
     include_package_data=True,
+    use_scm_version=True,
+    setup_requires=['setuptools_scm']
 )
