@@ -13,6 +13,10 @@ install:
 script:
   - "gulp sass --env prod"
   - "python setup.py build"
+  # npm can change package-lock.json (competing with Prettier). Stashing
+  # ensures that the git repo is clean to make a release with setuptools_scm
+  # versioning.
+  - "git stash"
 env:
   global:
     - PYPI_DEPLOY=false  # disable PyPI pushes in regular matrix
