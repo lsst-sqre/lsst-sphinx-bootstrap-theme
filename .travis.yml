@@ -5,8 +5,14 @@ matrix:
     # Use the Python 3.6 build for PyPI deployments and doc uploads
     - python: "3.6"
       env: PYPI_DEPLOY=true LTD_SKIP_UPLOAD=false
+install:
+  - "nvm install node"  # latest version of node
+  - "nvm use node"
+  - "npm install gulp --global"
+  - "npm install"
 script:
-  - python setup.py build
+  - "gulp sass --env prod"
+  - "python setup.py build"
 env:
   global:
     - PYPI_DEPLOY=false  # disable PyPI pushes in regular matrix
