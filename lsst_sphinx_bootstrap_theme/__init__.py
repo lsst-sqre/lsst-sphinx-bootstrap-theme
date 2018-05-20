@@ -2,9 +2,13 @@ import os
 import pkg_resources
 
 
-__version__ = pkg_resources.get_distribution(
-    'lsst_sphinx_bootstrap_theme').version
-__version_full__ = __version__
+try:
+    __version__ = pkg_resources.get_distribution(
+        'lsst_sphinx_bootstrap_theme').version
+except pkg_resources.DistributionNotFound:
+    __version__ = 'unknown'
+finally:
+    __version_full__ = __version__
 
 
 def get_html_theme_path():
