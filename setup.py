@@ -1,16 +1,13 @@
-#!/usr/bin/env python
-# Licensed under a 3-clause BSD style license - see LICENSE.rst
-
 from setuptools import setup
-
-NAME = 'lsst-sphinx-bootstrap-theme'
 
 
 setup(
-    name=NAME,
-    description='Sphinx theme for LSST Stack documentation built on '
-                'Bootstrap and astropy-helpers',
-    author='Jonathan Sick',
+    name='lsst-sphinx-bootstrap-theme',
+    description=(
+        "Sphinx theme for LSST user documentation built on Bootstrap and "
+        "Astropy's theme."
+    ),
+    author='Association of Universities for Research in Astronomy',
     author_email='jsick@lsst.org',
     license='BSD',
     url='https://github.com/lsst-sqre/lsst-sphinx-bootstrap-theme',
