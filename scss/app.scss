@@ -16,7 +16,7 @@
 @import 'settings.colors';
 
 body {
-  background-color: #ffffff;
+  background-color: $white;
   margin: 0;
   font-family: 'source-sans-pro', 'Helvetica Neue', 'Helvetica', sans-serif;
   font-weight: 400;
@@ -390,7 +390,6 @@ div.related {
   z-index: 10000;
   font-size: 100%;
   vertical-align: middle;
-  background-color: #fff;
   border-bottom: 1px solid #bbb;
 }
 div.related ul {
@@ -480,7 +479,6 @@ div.documentwrapper {
 }
 
 div.body {
-  background-color: #ffffff;
   padding: 0 0 0px 20px;
 }
 
