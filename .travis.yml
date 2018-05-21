@@ -15,6 +15,7 @@ script:
   - "python setup.py build"
   - "git status"
   - "git diff package.json"
+  - "git diff package-lock.json"
 env:
   global:
     - PYPI_DEPLOY=false  # disable PyPI pushes in regular matrix
