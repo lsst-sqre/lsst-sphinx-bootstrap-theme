@@ -2,8 +2,7 @@
   "name": "lsst-sphinx-bootstrap-theme",
   "private": true,
   "version": "0.0.1",
-  "description":
-    "Sphinx theme for LSST docs, based on Bootstrap and Astropy.\"",
+  "description": "Sphinx theme for LSST docs, based on Bootstrap and Astropy.",
   "main": "gulpfile.babel.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
