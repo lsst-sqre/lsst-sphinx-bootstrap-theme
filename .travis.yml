@@ -13,6 +13,7 @@ install:
 script:
   - "gulp sass --env prod"
   - "python setup.py build"
+  - "git status"
 env:
   global:
     - PYPI_DEPLOY=false  # disable PyPI pushes in regular matrix
