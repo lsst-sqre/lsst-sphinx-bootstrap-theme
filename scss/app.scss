@@ -538,20 +538,24 @@ div.warning ol {
 
 /* Admonitions only */
 div.admonition {
-  border: 1px solid #609060;
-  background-color: #e9ffe9;
+  border: 1px solid $primary-blue;
+  background-color: $white;
 }
 div.admonition p.admonition-title {
-  background-color: #70a070;
+  background-color: $primary-blue;
 }
 
 /* Warnings only */
-div.warning {
-  border: 1px solid #900000;
-  background-color: #ffe9e9;
+div.warning,
+div.caution,
+div.important {
+  border: 1px solid $primary-red;
+  background-color: $white;
 }
-div.warning p.admonition-title {
-  background-color: #b04040;
+div.warning p.admonition-title,
+div.caution p.admonition-title,
+div.important p.admonition-title {
+  background-color: $primary-red;
 }
 
 /* Figures ------------------------------------------------------------------ */
