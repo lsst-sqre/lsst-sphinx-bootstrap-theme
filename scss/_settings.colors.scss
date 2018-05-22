@@ -18,3 +18,7 @@ $text-color: $dark-grey;
 $page-color: $white;
 $h2-color: $primary-color;
 $muted-text-color: lighten($text-color, 70%);
+
+// Admonitions
+$info-admonition-color: $primary-blue;
+$warning-admonition-color: $primary-red;
