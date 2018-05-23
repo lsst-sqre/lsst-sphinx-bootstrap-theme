@@ -75,15 +75,18 @@ div.sphinxsidebar form {
   margin-top: 10px;
 }
 
-div.sphinxsidebar input {
-  border: 1px solid #98dbcc;
-  font-family: sans-serif;
+.c-searchbox {
+  border: 1px solid $primary-blue;
   font-size: 1em;
+  width: 200px;
+  margin-bottom: 1.5em;
+  border-radius: 15px;
+  padding-left: 0.5em;
 }
 
 div.sphinxsidebar #searchbox input[type='text'] {
   float: left;
-  width: 80%;
+  width: 100%;
   padding: 0.25em;
   box-sizing: border-box;
 }

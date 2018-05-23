@@ -9,11 +9,11 @@
  * Modified again by Jonathan Sick (LSST/AURA).
  */
 
-/* Core styling from sphinx itself */
-@import 'basic';
-
 // Settings
 @import 'settings.colors';
+
+/* Core styling from sphinx itself */
+@import 'basic';
 
 body {
   background-color: $white;
