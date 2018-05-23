@@ -426,9 +426,10 @@ div.sphinxsidebarwrapper {
 }
 
 div.sphinxsidebar h3 {
-  font-size: 1.4em;
-  font-weight: 400;
-  margin: 5px 0px 0px 5px;
+  font-size: 1.2em;
+  font-weight: 700;
+  // margin: 5px 0px 0px 5px;
+  margin: 0 0 0.5em 0;
   padding: 0;
   line-height: 1.6em;
 }
@@ -444,13 +445,27 @@ div.sphinxsidebar p.topless {
   margin: 5px 10px 10px 10px;
 }
 div.sphinxsidebar ul {
-  margin: 0px 0px 0px 5px;
+  margin: 0 0 0 0;
   padding: 0;
+}
+div.sphinxsidebar li {
+  margin-bottom: 0.5em;
 }
 
 div.sphinxsidebar ul ul {
+  margin-left: 0;
+  list-style-type: none;
+}
+
+div.sphinxsidebar ul ul ul,
+div.sphinxsidebar ul ul ul ul {
   margin-left: 15px;
-  list-style-type: disc;
+  list-style-type: none;
+}
+
+div.sphinxsidebar a + ul {
+  // Ensure that sub sections are also spaced evenly, like <li>s
+  margin-top: 0.5em;
 }
 
 /* If showing the global TOC (toctree),
