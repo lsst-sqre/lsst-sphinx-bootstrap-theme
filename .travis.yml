@@ -1,13 +1,30 @@
 sudo: false
 language: python
-python:
-  - '3.6'
+matrix:
+  include:
+    # Use the Python 3.6 build for PyPI deployments and doc uploads
+    - python: "3.6"
+      env: PYPI_DEPLOY=true LTD_SKIP_UPLOAD=false
+install:
+  - "nvm install node"  # latest version of node
+  - "nvm use node"
+  - "npm install gulp --global"
+  - "npm install"
 script:
-  - python setup.py build
+  - "gulp sass --env prod"
+  - "python setup.py build"
+  # npm can change package-lock.json (competing with Prettier). Stashing
+  # ensures that the git repo is clean to make a release with setuptools_scm
+  # versioning.
+  - "git stash"
+env:
+  global:
+    - PYPI_DEPLOY=false  # disable PyPI pushes in regular matrix
 deploy:
   provider: pypi
   user: sqre-admin
   skip_upload_docs: true
+  skip_cleanup: true
   distributions: sdist
   password:
     # PyPI deployment credentials for sqre-admin
@@ -15,3 +32,4 @@ deploy:
   on:
     tags: true
     repo: lsst-sqre/lsst-sphinx-bootstrap-theme
+    condition: "$PYPI_DEPLOY = true"
