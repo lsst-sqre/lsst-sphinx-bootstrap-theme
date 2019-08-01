@@ -6,7 +6,6 @@
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "precommit": "pretty-quick --staged",
     "pretty": "pretty-quick"
   },
   "repository": {
@@ -33,5 +32,10 @@
     "minimist": "^1.2.0",
     "prettier": "1.18.2",
     "pretty-quick": "^1.11.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
