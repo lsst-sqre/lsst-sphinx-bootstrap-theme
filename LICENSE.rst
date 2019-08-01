@@ -1,4 +1,4 @@
-Copyright 2016-2018 Association of Universities for Research in Astronomy. 2014, Astropy Developers.
+Copyright 2016-2019 Association of Universities for Research in Astronomy. 2014, Astropy Developers.
 
 All rights reserved.
 
