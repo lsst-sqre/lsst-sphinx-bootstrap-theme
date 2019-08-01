@@ -137,7 +137,6 @@ code,
 pre,
 tt {
   font-family: 'source-code-pro', 'Menlo', monospace;
-  font-size: 1em;
   font-weight: 400;
 }
 code {
@@ -145,6 +144,7 @@ code {
 }
 pre {
   display: block;
+  font-size: 0.8em;
   padding: 8.5px;
   margin: 0 0 18px;
   line-height: 1.2;
@@ -154,7 +154,11 @@ pre {
   -moz-border-radius: 3px;
   border-radius: 3px;
   white-space: pre;
-  word-wrap: break-word;
+  overflow-x: auto;
+}
+code,
+tt {
+  font-size: 0.95em;
 }
 
 img {

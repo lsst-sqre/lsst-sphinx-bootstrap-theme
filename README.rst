@@ -51,12 +51,12 @@ gulp
 Use this default command for development.
 It does the following:
 
-- `sass <#gulp-sass>`__ (compile Sass)
+- `sass <#gulp-scss>`__ (compile Sass)
 - Watches for changes and recompiles assets as necessary.
 
-.. _gulp-sass:
+.. _gulp-scss:
 
-gulp sass
+gulp scss
 ---------
 
 Compile Sass into CSS (``app.css``).
