@@ -2,6 +2,21 @@
 lsst-sphinx-bootstrap-theme Change log
 ######################################
 
+0.2.1 (2019-08-01)
+==================
+
+Infrastructure changes
+----------------------
+
+- Updated build pipeline to use Gulp 4 and new versions of all npm dependencies.
+
+Design changes
+--------------
+
+- ``<pre>`` elements have a small font size, 0.8 em, that helps ensure that 80-character-wide samples fit in the text column.
+  As well, line wrapping is disabled in ``<pre>`` elements and if the content does overflow, the browser will show a horizontal scroll bar.
+- ``<code>`` also have a slightly smaller font size, 0.95 em, which helps them match up with text inline.
+
 0.2.0 (2018-05-23)
 ==================
 
