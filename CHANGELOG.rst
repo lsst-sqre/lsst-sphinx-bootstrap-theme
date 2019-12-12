@@ -2,6 +2,20 @@
 lsst-sphinx-bootstrap-theme Change log
 ######################################
 
+0.2.2 (2019-12-12)
+==================
+
+Theme changes
+-------------
+
+- Insert the ``sidebar.js`` via an explicit ``<script>`` tag in ``layout.html``, rather than appending to ``script_files``.
+  This change is required for Sphinx 3.0 compatibility, but is backwards compatible with earlier versions of Sphinx.
+
+Infrastructure changes
+----------------------
+
+- ``node-sass`` is now pinned to 4.13.0 to work around an npm installation issue.
+
 0.2.1 (2019-08-01)
 ==================
 
