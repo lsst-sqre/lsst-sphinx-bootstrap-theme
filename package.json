@@ -26,7 +26,7 @@
     "gulp-noop": "^1.0.0",
     "gulp-postcss": "^8.0.0",
     "gulp-run": "^1.7.1",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "husky": "^3.0.2",
